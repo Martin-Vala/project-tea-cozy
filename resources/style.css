@@ -2,7 +2,6 @@
 body {
     margin: 0;
     padding: 0;
-
     font-family: Helvetica, sans-serif;
     color: seashell;
     background-color: black;
@@ -23,11 +22,15 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+}
+header > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    border-bottom: 1px solid seashell;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 #logo {
     height: 50px;
@@ -92,9 +95,19 @@ header nav ul li a:hover {
     font-weight: bold;
     margin-top: 5px;
 }
-#featured-tea {
+a#featured-tea {
     position: relative;
     top: -100px;
+}
+@media only screen and (max-width: 556px) {
+    a#featured-tea {
+        top: -130px;
+    }
+}
+@media only screen and (max-width: 425.5px) {
+    a#featured-tea {
+        top: -150px;
+    }
 }
 /* Locations Section */
 .locations-section {
@@ -131,7 +144,25 @@ header nav ul li a:hover {
     margin: 15px 20px;
     background-color: black;
 }
+a#locations {
+    position: relative;
+    top: 0;
+}
+@media only screen and (max-width: 556px) {
+    a#locations {
+        top: -25px;
+    }
+}
+@media only screen and (max-width: 425.5px) {
+    a#locations {
+        top: -50px;
+    }
+}
 /* Footer */
+footer {
+    max-width: 1500px;
+    margin: 0 auto;
+}
 footer section {
     min-height: 200px;
     text-align: center;
